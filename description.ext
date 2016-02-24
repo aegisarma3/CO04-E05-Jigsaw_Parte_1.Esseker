@@ -1,0 +1,72 @@
+//#include "aegis\functions.hpp"
+
+author = "Toaster & Collumbus";
+onLoadName = "O Celeiro";
+onLoadMission = "A equipe Kaiser investiga grande movimentação de veículos e possível posição do carregamento nuclear.";
+loadScreen = "images\intro4.jpg";
+overviewPicture = "images\intro4.jpg";
+overviewText = "A equipe Kaiser investiga grande movimentação de veículos e possível posição do carregamento nuclear.";
+
+/*player createDiaryRecord ["Diary", ["Execution", "A inserção do grupo AEGIS já foi iniciada por meio de contatos locais. <br/>O grupo sairá da residência do empresário que contataria João Silva, em seguida deverá iniciar incurssão pelo centro da cidade até a mesquita. <br/><br/>De lá, deverão avançar até o aeroporto, onde um avião aguarda o VIP para extração."]];
+player createDiaryRecord ["Diary", ["Missão", "O presidente d Anabel Engenharia contratou o <marker name='aegis'>AEGIS</marker> para fazer a <marker name='extracao'>extração</marker> de <marker name='vip'>João Silva</marker> até o aeroporto de Zargabad, aonde um <marker name='extracao'>C130</marker> está esperando."]];
+player createDiaryRecord ["Diary", ["Situação", " <marker name='vip'>João Silva</marker>, gerente de compras da Anabel Engenharia foi surpreendido por insurgentes do estado islâmico enquanto negociava máquinas pesadas para um empresário local.<br/><br/> João tem treinamento em segurança, mas não possui equipamentos nem suporte para sair da cidade."]];*/
+
+
+enableDebugConsole = 1;
+respawn            = 4;
+//respawnTemplates[] = {"ace_spectator"};
+DisabledAI = true;
+
+//allowFunctionsRecompile = 0;
+
+corpseLimit = 4;
+corpseRemovalMinTime = 20;
+corpseRemovalMaxTime = 35;
+
+
+wreckLimit = 3;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 120;
+
+
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 12;
+};
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Missão Cumprida";
+		subtitle = "Informações coletadas";
+		description = "PMC AEGIS conseguiu novas pistas sobre o caminhão com o material radioativo roubado.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+  class loser
+  {
+		title = "Missão Falhou";
+		subtitle = "Todo o grupo AEGIS morreu";
+		description = "Mesmo retornando fogo e lutando bravamente, o grupo AEGIS pereceu em campo de batalha.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.6,0.1,0.2,1};
+	};
+
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	class Geiger
+	{
+		name = "Geiger";
+		sound[] = {"sounds\geiger_s.ogg", 1, 1};
+		titles[] = {};
+	};
+};
