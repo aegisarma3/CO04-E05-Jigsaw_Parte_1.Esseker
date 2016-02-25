@@ -62,7 +62,13 @@ class CfgDebriefing
 
 class CfgSounds
 {
-	sounds[] = {};
+	sounds[] =
+	{
+		"Sewer_Sound",
+		"Sewer_Splash_01",
+		"Sewer_Splash_02",
+		"Sewer_Tail"
+	};
 	class Geiger
 	{
 		name = "Geiger";
