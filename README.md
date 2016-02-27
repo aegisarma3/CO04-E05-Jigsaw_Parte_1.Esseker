@@ -1,6 +1,6 @@
 
 # Jigsaw - Parte 1
-Quarto episódio da campanha em Esseker.
+Quinto episódio da campanha em Esseker.
 
 # ![logo](images/SITREP_README.jpg)
 
@@ -76,4 +76,4 @@ Todos os mods abaixo são necessários para a campanha.
 - [@tryk - 0.9.4 beta](http://www.armaholic.com/page.php?id=26661)
 
 ## Mods utilizados no server:
-- [@inidbi](http://www.armaholic.com/page.php?id=23340)
+- [@aegisserver - 0.2](https://github.com/aegisarma3/aegisserver/releases/download/v0.2/aegisserver.zip)
