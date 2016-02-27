@@ -5,3 +5,5 @@ enableSaving [false, false];
 [] execVM "lanterna.sqf";
 
 ["Initialize"] call BIS_fnc_dynamicGroups;
+
+_nul = []execVM "AF_Keypad\AF_KP_vars.sqf";
