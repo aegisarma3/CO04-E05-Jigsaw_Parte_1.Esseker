@@ -31,8 +31,6 @@ _Sewer_Sound attachTo [_player, [0,0,0]];
 // Disable Navigation
 showWatch false;
 showMap false;
-showCompass false;
-showHUD false;
 showGPS false;
 [group player, currentWaypoint (group player)] setWaypointVisible false;
 
@@ -89,7 +87,7 @@ Sleep 0.25;
 0 setWaves 0;
 0 setWindStr 0;
 
-// Move Coleridge into Sewer
+// Move player into Sewer
 _player setPos (getPos sewer_e);
 Sleep 0.25;
 _player switchMove "AmovPknlMstpSlowWrflDnon";
