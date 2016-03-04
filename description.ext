@@ -122,4 +122,37 @@ class CfgSounds
 		};
 		titles[]={};
 	};
+	class Sewer_Voices_01
+	{
+		scope=1;
+		sound[]=
+		{
+			"sounds\Sewer_Voices_01.wav",
+			2.5,
+			1
+		};
+		titles[]={};
+	};
+	class civ_f
+	{
+		scope=1;
+		sound[]=
+		{
+			"sounds\civ_f.ogg",
+			1,
+			1
+		};
+		titles[]={};
+	};
 };
+
+/*class CfgSFX {
+	sounds[] = {};
+
+  	class sfxsound {
+			name = "civ_f";
+			sounds[]={sfxsound};
+			sfxsound[]={"sounds\civ_f.ogg",6,1,18,1,1,1,0};
+			empty[]= {"",0,0,0,0,0,0,0};
+		};
+};*/

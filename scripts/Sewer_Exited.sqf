@@ -33,10 +33,7 @@ skipTime 9;
 
 showWatch true;
 showMap true;
-showCompass true;
-showHUD true;
 showGPS true;
-
 [group player, currentWaypoint (group player)] setWaypointVisible true;
 
 skipTime -24;
