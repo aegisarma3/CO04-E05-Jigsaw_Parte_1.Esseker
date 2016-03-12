@@ -42,15 +42,6 @@ while { _desired_light < _light } do {
 
 
 
-player addEventHandler ["Killed",
-{
-   ["Initialize", [player]] call BIS_fnc_EGSpectator;
-}];
-
-/*player addEventHandler ["Respawn",
-{
-   ["Terminate"] call BIS_fnc_EGSpectator;
-}];*/
 
 //Área Radioativa
 radarea = false;
