@@ -1,32 +1,8 @@
 //#include "aegis\functions.hpp"
 #include "AF_Keypad\AF_KP_defines.hpp"
 #include "AF_Keypad\AF_KP_dialogs.hpp"
+#include "aegis_ace_settings.hpp"
 
-author = "Toaster & Collumbus";
-onLoadName = "Jigsaw Parte 1";
-onLoadMission = "PMC AEGIS continua sua busca por informações sobre o paradeiro do carregamento roubado";
-loadScreen = "images\intro4.jpg";
-overviewPicture = "images\intro4.jpg";
-overviewText = "PMC AEGIS continua sua busca por informações sobre o paradeiro do carregamento roubado";
-
-enableDebugConsole = 1;
-respawn            = 1;
-DisabledAI = true;
-
-corpseLimit = 4;
-corpseRemovalMinTime = 20;
-corpseRemovalMaxTime = 35;
-
-wreckLimit = 3;
-wreckRemovalMinTime = 60;
-wreckRemovalMaxTime = 120;
-
-class Header
-{
-	gameType = RPG;
-	minPlayers = 1;
-	maxPlayers = 12;
-};
 
 class CfgDebriefing
 {
