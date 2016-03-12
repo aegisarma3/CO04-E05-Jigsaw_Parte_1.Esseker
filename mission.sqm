@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9064.1201,170.72142,7891.1465};
-		dir[]={-0.84766072,-0.49981892,-0.17850897};
-		up[]={-0.48918593,0.86605179,-0.10302088};
-		aside[]={-0.20609675,-2.6077032e-008,0.97862679};
+		pos[]={9057.6904,168.96237,7891.3384};
+		dir[]={-0.82499748,-0.53453898,-0.18406881};
+		up[]={-0.52180111,0.84505397,-0.11642399};
+		aside[]={-0.21778679,7.6436118e-007,0.97610134};
 	};
 };
 binarizationWanted=0;
@@ -146,25 +146,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -196,6 +177,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -34265,10 +34265,10 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={9055.7344,166.41777,7889.7349};
-			angle=3.1073825;
+			angle=3.107384;
 			class Attributes
 			{
-				onActivation="c2 switchMove "" """;
+				onActivation="c2 switchMove "" "";c1 switchMove "" """;
 				sizeA=2;
 				sizeB=2;
 				timeout[]={10,10,10};
@@ -35259,7 +35259,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9056.8975,167.23915,7888.9771};
+						position[]={9056.8975,167.2392,7888.9766};
 					};
 					side="Independent";
 					flags=3;
@@ -35382,14 +35382,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9056.2129,167.23885,7890.8232};
-						angles[]={0,1.5681536,0};
+						position[]={9056.2129,167.239,7890.8228};
+						angles[]={0,1.5681609,0};
 					};
 					side="Independent";
 					flags=3;
 					class Attributes
 					{
-						init="this setCaptive true;[c1, true] call ACE_captives_fnc_setHandcuffed;";
+						init="this setCaptive true;[this,""STAND_U1"",""ASIS""] call BIS_fnc_ambientAnim;";
 						name="c1";
 						class Inventory
 						{
@@ -35448,6 +35448,44 @@ class Mission
 						};
 						class Attribute2
 						{
+							property="Revo_ambAnim_activate";
+							expression="[_value,_this] spawn {waitUntil {time >1};if (_this select 0) then{[(_this select 1),(_this select 1) getVariable ['Revo_ambAnimType','STAND'],(_this select 1) getVariable ['Revo_ambAnimEquipment','RANDOM']] call BIS_fnc_ambientAnim} else {(_this select 1) call BIS_fnc_ambientAnim__terminate};};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Revo_ambAnim_type";
+							expression="_this setVariable ['Revo_ambAnimType',toUpper _value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="STAND_U1";
+								};
+							};
+						};
+						class Attribute4
+						{
 							property="ace_isSurrendered";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
 							class Value
@@ -35465,7 +35503,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute5
+						{
+							property="Revo_ambAnim_equipment";
+							expression="_this setVariable ['Revo_ambAnimEquipment',toUpper _value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="ASIS";
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 			};
