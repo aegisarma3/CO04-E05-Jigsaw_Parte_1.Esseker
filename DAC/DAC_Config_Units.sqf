@@ -499,15 +499,17 @@ switch (_TypNumber) do
   case 11:
   {
     _Unit_Pool_S = [
-    "CAF_AG_EEUR_R_AK47",
-		"CAF_AG_EEUR_R_AK47",
-    "CAF_AG_EEUR_R_AK47",
-		"CAF_AG_EEUR_R_AK74",
-		"CAF_AG_EEUR_R_GL",
-		"CAF_AG_EEUR_R_PK",
-		"CAF_AG_EEUR_R_RPK",
-		"CAF_AG_EEUR_R_RPG",
-    "CAF_AG_EEUR_R_SVD"
+    "CAF_AG_BRA_R_OFFICER",
+    "CAF_AG_BRA_R_TEAMLEADER",
+    "CAF_AG_BRA_R_SQUADLEADER",
+    "CAF_AG_BRA_R_EOD",
+    "CAF_AG_BRA_R_SUPPORT",
+    "CAF_AG_BRA_R_MEDIC",
+    "CAF_AG_BRA_R_AT",
+    "CAF_AG_BRA_R_AA",
+    "CAF_AG_BRA_R_GRENADIER",
+    "CAF_AG_BRA_R_RIFLEMAN",
+    "CAF_AG_BRA_R_SHARPSHOOTER"
 	];
     _Unit_Pool_V = [
 		"CAF_AG_eeur_r_Offroad",
